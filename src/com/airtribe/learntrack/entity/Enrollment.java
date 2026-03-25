@@ -1,7 +1,7 @@
 package com.airtribe.learntrack.entity;
 
-import java.time.LocalDate;
 import com.airtribe.learntrack.util.IdGenerator;
+import java.time.LocalDate;
 
 public class Enrollment {
     public enum Status { ACTIVE, COMPLETED, CANCELLED } // optional enum
@@ -14,14 +14,14 @@ public class Enrollment {
 
     // Default constructor
     public Enrollment() {
-        this.id = IdGenerator.generateId();
+        this.id = IdGenerator.getNextEnrollmentId();
         this.enrollmentDate = LocalDate.now();
         this.status = Status.ACTIVE;
     }
 
     // Parameterized constructor
     public Enrollment(int studentId, int courseId, LocalDate enrollmentDate, Status status) {
-        this.id = IdGenerator.generateId();
+        this.id = IdGenerator.getNextEnrollmentId();
         this.studentId = studentId;
         this.courseId = courseId;
         this.enrollmentDate = enrollmentDate;

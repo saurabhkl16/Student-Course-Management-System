@@ -12,14 +12,13 @@ public class Course {
 
     // Default constructor
     public Course() {
-        System.out.println("Welcome");
-        // this.id = IdGenerator.generateId();
-        // this.active = true;
+        this.id = IdGenerator.getNextCourseId();
+        this.active = true;
     }
 
     // Parameterized constructor
     public Course(String courseName, String description, int durationInWeeks, boolean active) {
-        this.id = IdGenerator.generateId();
+        this.id = IdGenerator.getNextCourseId();
         this.courseName = courseName;
         this.description = description;
         this.durationInWeeks = durationInWeeks;
