@@ -26,6 +26,10 @@ public class Student extends Person {
         this(firstName, lastName, email, batch, true);
     }
 
+    public boolean isActive() {
+        return active;
+    }
+
     @Override
     public String getDisplayName() {
         return firstName + " " + lastName + " (Student)";
@@ -40,5 +44,9 @@ public class Student extends Person {
                 + ", batch='" + batch + '\''
                 + ", active=" + active
                 + '}';
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 }

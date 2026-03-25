@@ -1,6 +1,7 @@
 package com.airtribe.learntrack.service;
 
 import com.airtribe.learntrack.entity.Student;
+import com.airtribe.learntrack.exception.EntityNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,5 +44,24 @@ public class StudentService {
         for (Student s : students) {
             System.out.println(s);
         }
+    }
+
+    public Student findStudentById(int id) {
+        for (Student s : students) {
+            if (s.getId() == id) {
+                return s;
+            }
+        }
+        throw new EntityNotFoundException("Student not found with ID: " + id);
+    }
+
+    public void deactivateStudent(int id) {
+        // Find student by ID
+        Student student = findStudentById(id); // we just added this method
+
+        // Set active = false
+        student.setActive(false);
+
+        System.out.println("Student deactivated successfully: " + student.getDisplayName());
     }
 }
