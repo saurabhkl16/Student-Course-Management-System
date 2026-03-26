@@ -38,6 +38,9 @@ com/airtribe/learntrack/
 ├── util/
 │   └── IdGenerator.java
 │
+├── enums/
+│   ├── CourseStatus.java
+│   └── EnrollmentStatus.java
 └── ui/
     └── Main.java
 
