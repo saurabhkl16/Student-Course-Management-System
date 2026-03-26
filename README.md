@@ -21,18 +21,26 @@
 ## 🏗️ Project Structure
 
 ```
-com.airtribe.learntrack
-│── entity
+com/airtribe/learntrack/
+│
+├── constant/
+│   ├── AppConstants.java
+│   └── MenuOptions.java
+│
+├── entity/
 │   └── Student.java
 │
-│── service
-│   └── StudentService.java
+├── service/
+│   ├── StudentService.java
+│   ├── CourseService.java
+│   └── EnrollmentService.java
 │
-│── util
+├── util/
 │   └── IdGenerator.java
 │
-│── ui
-│   └── Main.java
+└── ui/
+    └── Main.java
+
 ```
 
 ---

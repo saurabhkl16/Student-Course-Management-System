@@ -1,5 +1,6 @@
 package com.airtribe.learntrack.ui;
 
+import com.airtribe.learntrack.constants.AppConstants;
 import com.airtribe.learntrack.service.CourseService;
 import com.airtribe.learntrack.service.EnrollmentService;
 import com.airtribe.learntrack.service.StudentService;
@@ -17,11 +18,7 @@ public class Main {
     public static void main(String[] args) {
 
         while (true) {
-            System.out.println("\n===== MAIN MENU =====");
-            System.out.println("1. Student Management");
-            System.out.println("2. Course Management");
-            System.out.println("3. Enrollment Management");
-            System.out.println("0. Exit");
+            System.out.println(AppConstants.MAIN_MENU);
 
             try {
                 int choice = Integer.parseInt(scanner.nextLine());
@@ -49,11 +46,7 @@ public class Main {
 
     // ---------------- STUDENT MENU ----------------
     private static void studentMenu() {
-        System.out.println("\n--- Student Menu ---");
-        System.out.println("1. Add Student");
-        System.out.println("2. View All Students");
-        System.out.println("3. Search Student by ID");
-        System.out.println("4. Deactivate Student");
+        System.out.println(AppConstants.STUDENT_MENU);
 
         try {
             int choice = Integer.parseInt(scanner.nextLine());
@@ -97,10 +90,7 @@ public class Main {
 
     // ---------------- COURSE MENU ----------------
     private static void courseMenu() {
-        System.out.println("\n--- Course Menu ---");
-        System.out.println("1. Add Course");
-        System.out.println("2. View All Courses");
-        System.out.println("3. Activate/Deactivate Course");
+        System.out.println(AppConstants.COURSE_MENU);
 
         try {
             int choice = Integer.parseInt(scanner.nextLine());
@@ -136,10 +126,7 @@ public class Main {
 
     // ---------------- ENROLLMENT MENU ----------------
     private static void enrollmentMenu() {
-        System.out.println("\n--- Enrollment Menu ---");
-        System.out.println("1. Enroll Student");
-        System.out.println("2. View Student Enrollments");
-        System.out.println("3. Update Enrollment Status");
+        System.out.println(AppConstants.ENROLLMENT_MENU);
 
         try {
             int choice = Integer.parseInt(scanner.nextLine());
