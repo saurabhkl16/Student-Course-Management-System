@@ -34,7 +34,7 @@ public class Main {
                     case 3 ->
                         enrollmentMenu();
                     case 0 -> {
-                        System.out.println("Exiting...");
+                        System.out.println("Visit again....");
                         return;
                     }
                     default ->
