@@ -2,27 +2,21 @@ package com.airtribe.learntrack.entity;
 
 import com.airtribe.learntrack.util.IdGenerator;
 
-public class Student {
+public class Student extends Person {
 
     // Private fields (Encapsulation)
-    private int id;
-    private String firstName;
-    private String lastName;
-    private String email;
     private String batch;
     private boolean active;
 
     public Student() {
-        this.id = IdGenerator.generateId(); // auto-generate ID
+        super(IdGenerator.getNextStudentId(), "", "", "");
+        // this.id = IdGenerator.generateId(); // auto-generate ID
         this.active = true;
     }
 
     // Default constructor
     public Student(String firstName, String lastName, String email, String batch, boolean active) {
-        this.id = IdGenerator.generateId();
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
+        super(IdGenerator.getNextStudentId(), firstName, lastName, email); // call Person constructor
         this.batch = batch;
         this.active = active;
     }
@@ -30,6 +24,15 @@ public class Student {
     // Constructor overloading: without active (default to true)
     public Student(String firstName, String lastName, String email, String batch) {
         this(firstName, lastName, email, batch, true);
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    @Override
+    public String getDisplayName() {
+        return firstName + " " + lastName + " (Student)";
     }
 
     @Override
@@ -41,5 +44,9 @@ public class Student {
                 + ", batch='" + batch + '\''
                 + ", active=" + active
                 + '}';
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 }
