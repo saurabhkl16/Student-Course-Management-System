@@ -9,3 +9,5 @@ It allows admins to manage:
 - Enrollments
 
 This project focuses on **Java fundamentals** like OOP, Collections, and Exception Handling.
+
+Java 21+
