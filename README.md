@@ -16,7 +16,6 @@
 * Unique ID generation using static methods
 * Clean layered architecture (Entity, Service, Utility)
 
-=====================================================================================
 
 ## 🏗️ Project Structure
 
@@ -125,9 +124,10 @@ java com.airtribe.learntrack.main
 
 ---
 
-===========================
 
 ## 👨‍💻 Author
 Saurabh Lomte
 
-===========================
+This project focuses on **Java fundamentals** like OOP, Collections, and Exception Handling.
+
+Java 21+
